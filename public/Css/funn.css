@@ -1,0 +1,94 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drag-container {
+  width: 200px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.drop-container {
+  flex-grow: 1;
+  min-height: 200px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: move;
+  font-size: 24px;
+  color: #333;
+}
+
+.reset-button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff6b6b, #ff3d4a);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.reset-button:hover {
+  background: linear-gradient(to right, #ff3d4a, #ff6b6b);
+}
+
+.message {
+  display: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.success {
+  background-color: #c5f5d7;
+  border-color: #8ed9a9;
+}
+
+.show-message .message {
+  display: block;
+}
+
+.item.dragging {
+  opacity: 0.5;
+  transform: scale(0.8) rotate(-30deg);
+  transition: transform 0.3s;
+  animation: fly 1s linear infinite; /* Add animation property for flying effect */
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) rotate(-30deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-30deg);
+  }
+}

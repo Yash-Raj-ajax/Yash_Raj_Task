@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/Css/funn.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Frontend assignment </h2>
+      <div class="container-wrapper">
+        <div class="drag-container">
+          <div class="item" draggable="true" ondragstart="drag(event)">
+            <i class="fas fa-image"></i>
+          </div>
+          <div class="item" draggable="true" ondragstart="drag(event)">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="item" draggable="true" ondragstart="drag(event)">
+            <i class="fas fa-music"></i>
+          </div>
+          <div class="item" draggable="true" ondragstart="drag(event)">
+            <i class="fas fa-file"></i>
+          </div>
+          <div class="item" draggable="true" ondragstart="drag(event)">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="item" draggable="true" ondragstart="drag(event)">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div
+          class="drop-container"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <span class="message">Drop an item here</span>
+        </div>
+      </div>
+      <button class="reset-button" onclick="reset()">Reset</button>
+    </div>
+
+    <script src="/function/funn.js"></script>
+  </body>
+</html>
